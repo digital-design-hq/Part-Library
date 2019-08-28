@@ -5,8 +5,8 @@ interface register_interface;
     // this must be set on a per core basis
     parameter BUSWIDTH     = 32;
     parameter REGS         = 1;
-    parameter POWEROF2REGS = $clog2(REGS) ** 2;
     parameter ADDRESSWIDTH = $clog2(REGS);
+    parameter POWEROF2REGS = (1 << $clog2(REGS));
 
 
     // clocks and resets
